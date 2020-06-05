@@ -1,0 +1,27 @@
+MMdnn framework is a tool for converting deep learning models. Currently MMdnn only
+supports conversion from darknet to IR, but nor viceversa. Therefore, I created
+an extension for the existing framework that converts models in IR to darknet ones.
+This also helps to bridge any framewrok to darknet through mmtocode functionally
+already existed in the framework
+
+This is a fork of the original MMdnn framework created by Microsoft.
+
+Some of the layers that are supported by my extension are: Input, Convolutional,
+MaxPool and Yolo.
+
+Steps for creating the environment
+1. conda create -n mmdnn python=3.6
+2. conda activate mmdnn
+3. inside conda, go to project path
+4. python setup.py install
+5. conda install pytorch torchvision cpuonly -c pytorch
+
+Generate IR model from darknet model:
+mmtoir --srcFramework darknet -w <path to .weights file> -n <path to .cfg file> --darknetStart 1 -o <output directory>
+
+Generate darknet model from IR model:
+python darknet_emitter.py -m D:\Programming\Output\.json -w D:\Programming\Output\.npy -o D:\Programming\Output
+
+Sources:
+https://github.com/AlexeyAB/darknet
+https://github.com/microsoft/MMdnn
