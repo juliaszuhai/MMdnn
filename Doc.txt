@@ -22,6 +22,8 @@ mmtoir --srcFramework darknet -w <path to .weights file> -n <path to .cfg file> 
 Generate darknet model from IR model:
 python darknet_emitter.py -m D:\Programming\Output\.json -w D:\Programming\Output\.npy -o D:\Programming\Output
 
+Links to input and output examples: https://drive.google.com/file/d/11shozX9mlxmuuDzSO3UK5UAVXyoe-0iH/view?usp=sharing (Input
+https://drive.google.com/file/d/1BwzKAqSRF9cm-Q5RN27O-pFHMbBEVKci/view?usp=sharing (Output)
 Sources:
 https://github.com/AlexeyAB/darknet
 https://github.com/microsoft/MMdnn
